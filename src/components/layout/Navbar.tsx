@@ -16,12 +16,13 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Services", href: "/#services" },
-    { name: "About", href: "/#about" },
-    { name: "Team", href: "/#team" },
-    { name: "Gallery", href: "/#gallery" },
-    { name: "Reviews", href: "/#reviews" },
-    { name: "FAQ", href: "/#faq" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Team", href: "/team" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Reviews", href: "/reviews" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   return (
@@ -38,27 +39,27 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center">
             <span className="font-serif text-2xl font-semibold tracking-tight text-charcoal">
-              Lumière
+              Lumière Studio
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-sm font-medium text-charcoal/80 hover:text-primary transition-colors"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#book"
+            <Link
+              to="/book"
               className="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-charcoal hover:bg-charcoal/90 transition-colors"
             >
               Book Now
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -78,14 +79,14 @@ export function Navbar() {
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100">
           <div className="px-4 pt-2 pb-6 space-y-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block px-3 py-3 text-base font-medium text-charcoal hover:text-primary hover:bg-gray-50 rounded-md"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

@@ -9,10 +9,10 @@ export function Footer() {
           {/* Brand */}
           <div>
             <span className="font-serif text-3xl font-semibold tracking-tight mb-6 block">
-              Lumière
+              Lumière Studio
             </span>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Accessible luxury and expert care. Reveal your natural glow with customized beauty treatments designed to enhance your confidence.
+              Accessible luxury and expert photography. Reveal your natural glow with customized photo sessions designed to capture your best moments.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">
@@ -28,11 +28,11 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-lg mb-6">Explore</h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><a href="#services" className="hover:text-white transition-colors">Our Services</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#team" className="hover:text-white transition-colors">Specialists</a></li>
-              <li><a href="#gallery" className="hover:text-white transition-colors">Gallery</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><Link to="/services" className="hover:text-white transition-colors">Our Services</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/team" className="hover:text-white transition-colors">Specialists</Link></li>
+              <li><Link to="/gallery" className="hover:text-white transition-colors">Gallery</Link></li>
+              <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
@@ -50,7 +50,7 @@ export function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-3 text-primary flex-shrink-0" />
-                <a href="mailto:hello@lumieresalon.com" className="hover:text-white transition-colors">hello@lumieresalon.com</a>
+                <a href="mailto:hello@lumierestudio.com" className="hover:text-white transition-colors">hello@lumierestudio.com</a>
               </li>
             </ul>
           </div>
@@ -76,11 +76,11 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Lumière Salon. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Lumière Studio. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Cancellation Policy</a>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link to="/cancellation" className="hover:text-white transition-colors">Cancellation Policy</Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function FinalCTA() {
   return (
     <section id="book" className="py-32 bg-charcoal text-white text-center relative overflow-hidden">
@@ -7,24 +9,22 @@ export function FinalCTA() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <span className="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">
-          Your Best Self Awaits
+          Your Best Moments Await
         </span>
         <h2 className="text-5xl md:text-6xl font-serif mb-8 leading-tight">
-          Ready for a Refresh?
+          Ready for a Shoot?
         </h2>
         <p className="text-xl text-gray-300 mb-12 font-light max-w-2xl mx-auto">
-          Secure your time today and let our experts craft a look that enhances your natural beauty and confidence.
+          Secure your time today and let our experts capture your unique story with stunning photography.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <a
-            href="https://booking-software-link.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/book"
             className="w-full sm:w-auto px-10 py-5 bg-primary text-white rounded-full font-medium hover:bg-primary-dark transition-colors text-lg shadow-lg shadow-primary/20"
           >
-            Book Appointment Online
-          </a>
+            Book Session Online
+          </Link>
           <span className="text-gray-400 italic">or</span>
           <a
             href="tel:+1234567890"

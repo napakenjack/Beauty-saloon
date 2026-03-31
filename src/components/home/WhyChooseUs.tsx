@@ -1,11 +1,12 @@
 import { CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function WhyChooseUs() {
   const benefits = [
-    "Hospital-grade sterilization for all tools",
-    "Personalized, unhurried consultations",
-    "Exclusive use of premium, non-toxic products",
-    "Quiet, relaxing atmosphere with complimentary beverages",
+    "High-end lighting and professional camera equipment",
+    "Personalized creative direction and posing guidance",
+    "Multiple aesthetic sets and versatile backdrops",
+    "Fast turnaround times with premium retouching",
   ];
 
   return (
@@ -16,8 +17,8 @@ export function WhyChooseUs() {
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden">
               <img
-                src="https://picsum.photos/seed/salon-owner/800/1000"
-                alt="Salon interior and specialist"
+                src="https://picsum.photos/seed/photographer/800/1000"
+                alt="Photographer in studio"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -25,7 +26,7 @@ export function WhyChooseUs() {
             {/* Floating Badge */}
             <div className="absolute -bottom-8 -right-8 bg-blush p-8 rounded-2xl shadow-xl hidden md:block max-w-xs">
               <p className="font-serif text-xl text-charcoal leading-snug">
-                "We believe beauty is a feeling, not just a look."
+                "We don't just take photos, we capture your essence."
               </p>
             </div>
           </div>
@@ -36,10 +37,10 @@ export function WhyChooseUs() {
               The Lumière Standard
             </span>
             <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-6">
-              Uncompromising Quality & Care
+              Uncompromising Quality & Vision
             </h2>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              We don't just provide services; we craft experiences. From the moment you walk through our doors, every detail is designed to make you feel pampered, heard, and completely at ease.
+              We don't just provide a space; we craft visual experiences. From the moment you step on set, every detail is designed to make you feel confident, comfortable, and ready to shine.
             </p>
 
             <ul className="space-y-4 mb-10">
@@ -51,12 +52,12 @@ export function WhyChooseUs() {
               ))}
             </ul>
 
-            <a
-              href="#about-us"
+            <Link
+              to="/about"
               className="inline-flex items-center justify-center px-8 py-3.5 bg-charcoal text-white hover:bg-charcoal/90 rounded-full font-medium transition-colors"
             >
               Learn More About Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>

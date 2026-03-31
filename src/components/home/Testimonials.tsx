@@ -4,12 +4,12 @@ const reviews = [
   {
     name: "Jessica M.",
     service: "Balayage & Cut",
-    text: "Absolutely incredible experience. Elena listened to exactly what I wanted and delivered a color that looks so natural and vibrant. The salon itself is a dream.",
+    text: "Absolutely incredible experience. Elena listened to exactly what I wanted and delivered photos that look so natural and vibrant. The studio itself is a dream.",
   },
   {
     name: "Amanda T.",
-    service: "Signature Facial",
-    text: "The most relaxing 60 minutes of my month. My skin has never looked so clear and glowing. Highly recommend Sarah for any skincare needs!",
+    service: "Portrait Session",
+    text: "The most fun 60 minutes of my month. My photos have never looked so clear and glowing. Highly recommend Sarah for any photography needs!",
   },
   {
     name: "Chloe R.",

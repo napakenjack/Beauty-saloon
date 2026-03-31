@@ -2,12 +2,12 @@ export function BookingSteps() {
   const steps = [
     {
       number: "01",
-      title: "Choose Your Service",
-      description: "Browse our menu and select the treatment that fits your needs.",
+      title: "Choose Your Session",
+      description: "Browse our portfolio and select the photography style that fits your needs.",
     },
     {
       number: "02",
-      title: "Pick a Specialist",
+      title: "Pick a Photographer",
       description: "Select your preferred artist or let us match you with the best fit.",
     },
     {

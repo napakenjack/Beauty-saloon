@@ -4,20 +4,20 @@ import { cn } from "@/lib/utils";
 
 const faqs = [
   {
-    question: "How should I prepare for my first appointment?",
-    answer: "Please arrive 10 minutes early to fill out any necessary consultation forms. For color services, arriving with unwashed, dry hair is best. For facials, come with a clean face if possible.",
+    question: "How should I prepare for my first session?",
+    answer: "Please arrive 10 minutes early to fill out any necessary consultation forms. Bring any outfits or props you'd like to use during your session.",
   },
   {
     question: "What is your cancellation policy?",
-    answer: "We require 24 hours notice for cancellations or rescheduling. Appointments canceled within 24 hours will incur a 50% charge of the service booked.",
+    answer: "We require 24 hours notice for cancellations or rescheduling. Sessions canceled within 24 hours will incur a 50% charge of the service booked.",
   },
   {
     question: "Do you offer consultations before booking?",
-    answer: "Yes! We highly recommend a complimentary 15-minute consultation for any major color corrections, extensions, or advanced skincare treatments to ensure we book the correct amount of time.",
+    answer: "Yes! We highly recommend a complimentary 15-minute consultation for any major projects, events, or advanced commercial shoots to ensure we book the correct amount of time.",
   },
   {
     question: "Is parking available?",
-    answer: "Yes, we have dedicated complimentary parking located directly behind the salon building.",
+    answer: "Yes, we have dedicated complimentary parking located directly behind the studio building.",
   },
 ];
 

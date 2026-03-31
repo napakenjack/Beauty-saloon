@@ -1,27 +1,28 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
-    id: "hair",
-    title: "Hair Styling & Color",
-    description: "Flawless balayage, precision cuts, and extensions for effortless dimension.",
-    image: "https://picsum.photos/seed/hair-salon/600/800",
-    link: "#hair",
+    id: "portrait",
+    title: "Portrait Photography",
+    description: "Professional headshots, family portraits, and creative personal branding sessions.",
+    image: "https://picsum.photos/seed/portrait-photo/600/800",
+    link: "/services/portrait",
   },
   {
-    id: "skin",
-    title: "Advanced Skincare",
-    description: "Restore your glow with medical-grade facials and rejuvenating treatments.",
-    image: "https://picsum.photos/seed/facial/600/800",
-    link: "#skin",
+    id: "commercial",
+    title: "Commercial & Product",
+    description: "High-end product photography and lifestyle campaigns to elevate your brand.",
+    image: "https://picsum.photos/seed/product-photo/600/800",
+    link: "/services/commercial",
   },
   {
-    id: "nails",
-    title: "Nails & Details",
-    description: "Russian manicures, pedicures, and intricate nail art with premium hygiene.",
-    image: "https://picsum.photos/seed/manicure/600/800",
-    link: "#nails",
+    id: "events",
+    title: "Event & Wedding",
+    description: "Capturing your most important moments with a cinematic and timeless approach.",
+    image: "https://picsum.photos/seed/wedding-photo/600/800",
+    link: "/services/events",
   },
 ];
 
@@ -34,54 +35,57 @@ export function ServicesGrid() {
             Our Expertise
           </span>
           <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-6">
-            Curated Beauty Treatments
+            Professional Photography Services
           </h2>
           <p className="text-gray-600 text-lg">
-            From routine maintenance to complete transformations, our services are tailored to your unique features and lifestyle.
+            From intimate portraits to large-scale commercial shoots, our studio provides the perfect setting and expertise for your vision.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.a
-              href={service.link}
+            <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group block relative overflow-hidden rounded-2xl aspect-[3/4] shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
             >
-              <img
-                src={service.image}
-                alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />
-              
-              <div className="absolute bottom-0 left-0 w-full p-8">
-                <h3 className="text-2xl font-serif text-white mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-white/80 text-sm mb-6 line-clamp-2">
-                  {service.description}
-                </p>
-                <div className="inline-flex items-center text-sm font-medium text-white group-hover:text-primary transition-colors">
-                  Explore Service <ArrowRight size={16} className="ml-2" />
+              <Link
+                to={service.link}
+                className="group block relative overflow-hidden rounded-2xl aspect-[3/4] shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+              >
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />
+                
+                <div className="absolute bottom-0 left-0 w-full p-8">
+                  <h3 className="text-2xl font-serif text-white mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/80 text-sm mb-6 line-clamp-2">
+                    {service.description}
+                  </p>
+                  <div className="inline-flex items-center text-sm font-medium text-white group-hover:text-primary transition-colors">
+                    Explore Service <ArrowRight size={16} className="ml-2" />
+                  </div>
                 </div>
-              </div>
-            </motion.a>
+              </Link>
+            </motion.div>
           ))}
         </div>
         
         <div className="mt-16 text-center">
-          <a
-            href="#all-services"
+          <Link
+            to="/services"
             className="inline-flex items-center justify-center px-8 py-3.5 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white rounded-full font-medium transition-colors"
           >
-            View Full Menu & Pricing
-          </a>
+            View Full Portfolio & Pricing
+          </Link>
         </div>
       </div>
     </section>

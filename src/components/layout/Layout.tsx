@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface LayoutProps {
   children: ReactNode;
@@ -27,12 +28,12 @@ export function Layout({ children }: LayoutProps) {
 
       {/* Mobile Sticky Booking Bar */}
       <div className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-100 p-4 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50">
-        <a
-          href="#book"
+        <Link
+          to="/book"
           className="flex w-full items-center justify-center px-6 py-3.5 border border-transparent text-base font-medium rounded-full text-white bg-charcoal hover:bg-charcoal/90 transition-colors"
         >
-          Book Appointment
-        </a>
+          Book Session
+        </Link>
       </div>
     </div>
   );

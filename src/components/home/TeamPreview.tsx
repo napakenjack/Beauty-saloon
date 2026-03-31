@@ -3,17 +3,17 @@ import { motion } from "motion/react";
 const team = [
   {
     name: "Elena Rossi",
-    role: "Master Colorist",
+    role: "Lead Photographer",
     image: "https://picsum.photos/seed/stylist1/400/500",
   },
   {
     name: "Sarah Jenkins",
-    role: "Lead Aesthetician",
+    role: "Creative Director",
     image: "https://picsum.photos/seed/stylist2/400/500",
   },
   {
     name: "Mia Chen",
-    role: "Nail Art Specialist",
+    role: "Senior Retoucher",
     image: "https://picsum.photos/seed/stylist3/400/500",
   },
 ];

@@ -10,12 +10,12 @@ export function TrustBar() {
     {
       icon: <ShieldCheck className="w-6 h-6 text-primary" />,
       title: "Certified Experts",
-      subtitle: "Master stylists & aestheticians",
+      subtitle: "Master photographers & retouchers",
     },
     {
       icon: <Sparkles className="w-6 h-6 text-primary" />,
-      title: "Premium Products",
-      subtitle: "Olaplex, Dyson & Medical-grade",
+      title: "Premium Gear",
+      subtitle: "Profoto, Sony & High-end lenses",
     },
   ];
 
