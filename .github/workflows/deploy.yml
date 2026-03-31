@@ -36,7 +36,7 @@ jobs:
 
       # ВОТ ЗДЕСЬ МЫ ПЕРЕДАЕМ ПУТЬ ДЛЯ GITHUB PAGES
       - name: Build project
-        run: npm run build -- --base=/beauty-saloon/
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
