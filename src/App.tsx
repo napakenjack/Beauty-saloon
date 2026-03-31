@@ -8,11 +8,11 @@ import Home from "./pages/Home";
 
 export default function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
