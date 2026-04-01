@@ -38,7 +38,10 @@ export function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center">
-            <span className="font-serif text-2xl font-semibold tracking-tight text-charcoal">
+            <span className={cn(
+              "font-serif text-2xl font-semibold tracking-tight transition-colors",
+              isScrolled ? "text-charcoal" : "text-white"
+            )}>
               Lumière Studio
             </span>
           </Link>
@@ -49,14 +52,24 @@ export function Navbar() {
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-sm font-medium text-charcoal/80 hover:text-primary transition-colors"
+                className={cn(
+                  "text-sm font-medium transition-colors",
+                  isScrolled 
+                    ? "text-charcoal/80 hover:text-primary" 
+                    : "text-white/90 hover:text-white"
+                )}
               >
                 {link.name}
               </Link>
             ))}
             <Link
               to="/book"
-              className="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-charcoal hover:bg-charcoal/90 transition-colors"
+              className={cn(
+                "inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full transition-colors",
+                isScrolled
+                  ? "text-white bg-charcoal hover:bg-charcoal/90"
+                  : "text-charcoal bg-white hover:bg-white/90"
+              )}
             >
               Book Now
             </Link>
@@ -66,7 +79,10 @@ export function Navbar() {
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-charcoal hover:text-primary transition-colors"
+              className={cn(
+                "transition-colors",
+                isScrolled ? "text-charcoal hover:text-primary" : "text-white hover:text-white/80"
+              )}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
